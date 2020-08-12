@@ -16,6 +16,7 @@ const Bookmark = ({ bookmark }) => {
   return (
     <div>
       <hr />
+
       <h4>{bookmark.title}</h4>
       <img className="img-round" src={bookmark.img} alt={bookmark.title} />
       <p>{bookmark.description}</p>
