@@ -9,15 +9,15 @@ const Form = () => {
     setUrl(e.target.value);
   };
 const details = {}
+
   const CustomComponent = ({ loading, preview }) => {
-    console.log(loading)
       details.url = preview.domain
       details.description = preview.description
       details.img = preview.img
       details.title = preview.title
     // console.log(details)
     return loading
-    ? (<h1>Loading...</h1>)
+    ? (<h1>Loading preview...</h1>)
     : (
         <div>
             <p>Domain: { preview.domain }</p>
@@ -35,8 +35,8 @@ const details = {}
       url: details.url,
       description: details.description,
       img: details.img,
+      title: details.title,
     };
-
     markRef.push(bookmark);
   };
   return (
