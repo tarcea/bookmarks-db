@@ -1,13 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css');
 
 body {
   font-family: roboto;
+  background-color: #efefef;
+  padding: 8px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 100;
+  text-align: center;
 }
 
 .img {
   /*display: block;*/
-  max-width:230px;
-  max-height:95px;
+  max-width:100px;
+  max-height:100px;
   width: auto;
   height: auto;
   border-radius: 3px;
@@ -22,6 +31,8 @@ body {
   opacity: 0.6;
   transition: opacity 0.3s ease;
   margin: 8px;
+
+
 }
 
 .button-ghost:hover {
@@ -35,3 +46,62 @@ body {
   /*flex-direction: row;*/
   justify-content: center;
 }
+
+/*content grid*/
+
+.parent {
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+.box {
+    /*border:1px solid ;*/
+    position:relative;
+    padding: 8px;
+    background-color: white;
+}
+
+/*.card-box {
+    position:relative;
+    background-color: #efefef;
+    height:100px;
+    max-width:100;
+}*/
+
+.img-gh {
+    border-radius:50%;
+
+    position:absolute;
+    left:20px;
+    top:-20px;
+}
+
+.cips-gh {
+    border-radius:50px;
+    background-color: pink;
+    width:240px;
+}
+
+.button-x {
+  position:absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.button-ghost-go {
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  margin: 8px;
+  max-width: 100%;
+
+}
+
+.button-ghost-go:hover {
+  opacity: 1;
+}
+

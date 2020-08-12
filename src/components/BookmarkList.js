@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import firebase from '../firebase/firebase';
 import Bookmark from './Bookmark';
+import '../css/style.css';
 
 const BookmarkList = () => {
 
@@ -19,7 +20,7 @@ const [bookmarkList, setBookmarkList] = useState();
   }, []);
 
   return (
-    <div>
+    <div className="parent">
     {bookmarkList
         ? bookmarkList.map((mark, index) => <Bookmark bookmark={mark} key={index} />)
         : ''}
