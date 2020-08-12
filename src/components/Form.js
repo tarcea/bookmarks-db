@@ -43,7 +43,7 @@ const details = {}
     <div>
       <div>
       <input type="text" onChange={handleOnChange} value={url} />
-      <button onClick={createBookmark}>Add bookmark</button>
+      <button className='button-ghost' onClick={createBookmark}>Add bookmark</button>
       <LinkPreview url={url} render={CustomComponent}/>
     </div>
     </div>

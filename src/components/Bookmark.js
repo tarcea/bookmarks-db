@@ -1,6 +1,6 @@
 import React from 'react';
 import firebase from '../firebase/firebase';
-import '../App.css';
+import '../css/style.css';
 
 const Bookmark = ({ bookmark }) => {
   const deleteBookmark = () => {
@@ -18,9 +18,12 @@ const Bookmark = ({ bookmark }) => {
       <hr />
 
       <h4>{bookmark.title}</h4>
-      <img className="img-round" src={bookmark.img} alt={bookmark.title} />
+      <img className="img" src={bookmark.img} alt={bookmark.title} />
       <p>{bookmark.description}</p>
-      <button onClick={deleteBookmark}>Delete</button>
+      <div className="casset-buttons">
+      <button className="button-ghost" onClick={deleteBookmark} disabled>Delete</button>
+      <button className="button-ghost">Go There</button>
+      </div>
     </div>
   );
 }

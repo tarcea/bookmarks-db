@@ -36,6 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+/*mine*/
 .img-round {
   /*display: block;*/
   max-width:230px;
@@ -44,3 +46,4 @@
   height: auto;
   border-radius: 3px;
 }
+
