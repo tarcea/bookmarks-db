@@ -18,7 +18,7 @@ const Bookmark = ({ bookmark }) => {
           <div className='description'>
             <p>{bookmark.description}</p>
           </div>
-        <button className="button-x" onClick={deleteBookmark}><i className="fas fa-times"></i></button>
+        <button className="button-x" onClick={deleteBookmark}>X</button>
         <a href={bookmark.url} target="_blank" rel="noopener noreferrer">
         <button className="button-ghost-go" >Go There</button></a>
 
