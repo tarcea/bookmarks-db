@@ -5,12 +5,12 @@ import BookmarkList from './components/BookmarkList';
 
 function App() {
   return (
-    <div className='App'>
-      <h1>Bookmarks</h1>
-      <Form />
-      <small>paste here the link you want it in th list</small>
-      <hr />
-      <BookmarkList />
+    <div className='App main-container'>
+      <div className="header-container">
+        <h1>Bookmarks</h1>
+        <Form />
+      </div>
+        <BookmarkList />
     </div>
   );
 }

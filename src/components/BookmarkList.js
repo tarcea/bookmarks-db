@@ -20,10 +20,17 @@ const [bookmarkList, setBookmarkList] = useState();
   }, []);
 
   return (
-    <div className="parent">
-    {bookmarkList
-        ? bookmarkList.map((mark, index) => <Bookmark bookmark={mark} key={index} />)
-        : ''}
+    <div className="content-container">
+      <div className="badge">
+        <div className="counter">
+          {bookmarkList ? bookmarkList.length : ''}
+        </div>
+      </div>
+      <div className="parent">
+        {bookmarkList
+            ? bookmarkList.map((value, index, array) => <Bookmark bookmark={array[array.length - 1 - index]} key={index} />)
+            : ''}
+      </div>
     </div>
   );
 }

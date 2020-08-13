@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import firebase from '../firebase/firebase';
 import LinkPreview from '@ashwamegh/react-link-preview';
+import '../css/style.css';
 
 const Form = () => {
   const [url, setUrl] = useState('');
@@ -42,10 +43,10 @@ const details = {}
   return (
     <div>
       <div>
-      <input type="text" onChange={handleOnChange} value={url} />
-      <button className='button-ghost' onClick={createBookmark}>Add bookmark</button>
-      <LinkPreview url={url} render={CustomComponent}/>
-    </div>
+        <input type="text" onChange={handleOnChange} value={url} className="form" placeholder="paste here the web address" />
+        <button className='button-ghost' onClick={createBookmark}>Bookmark</button>
+        <LinkPreview url={url} render={CustomComponent}/>
+      </div>
     </div>
   );
 }

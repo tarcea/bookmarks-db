@@ -14,11 +14,13 @@ const Bookmark = ({ bookmark }) => {
   //   });
   // };
   return (
-    <div class="box">
+    <div className="box">
         <h5><strong>{bookmark.title}</strong></h5>
         <img className="img" src={bookmark.img} alt={bookmark.title} />
-        <p>{bookmark.description}</p>
-        <button className="button-x" onClick={deleteBookmark} disabled><i class="fas fa-times"></i></button>
+          <div className='description'>
+            <p>{bookmark.description}</p>
+          </div>
+        <button className="button-x" onClick={deleteBookmark}><i className="fas fa-times"></i></button>
         <button className="button-ghost-go">Go There</button>
 
     </div>
