@@ -106,7 +106,7 @@ p {
   max-width: 90%;
   position: absolute;
   bottom: 8px;
-  right: 8px;
+  left: 48px;
 }
 
 .button-ghost-go:hover {
