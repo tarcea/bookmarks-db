@@ -3,13 +3,12 @@
 
 body {
   font-family: roboto;
-  background-color: black;
+  background-color: #eeeeee;
   padding: 8px;
 }
 
 h1 {
   font-weight: 200;
-  color: white;
 }
 
 p {
