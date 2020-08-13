@@ -19,11 +19,12 @@ p {
 
 .img {
   /*display: block;*/
-  max-width:100px;
+  max-width:200px;
   max-height:100px;
   width: auto;
   height: auto;
-  border-radius: 3px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px 1px #4A4A4A;
 }
 
 .button-ghost {
