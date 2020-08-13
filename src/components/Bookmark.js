@@ -8,10 +8,9 @@ const Bookmark = ({ bookmark }) => {
     const markRef = firebase.database().ref('Bookmarks').child(bookmark.id);
     markRef.remove();
   };
-  const goThere = (to: string) => {
-    //todo
-  };
-console.log(window.location.hostname)
+  // const goThere = (to: string) => {
+  //   //todo
+  // };
   return (
     <div className="box">
         <h5><strong>{bookmark.title}</strong></h5>
@@ -20,7 +19,8 @@ console.log(window.location.hostname)
             <p>{bookmark.description}</p>
           </div>
         <button className="button-x" onClick={deleteBookmark}><i className="fas fa-times"></i></button>
-        <button className="button-ghost-go" onClick={goThere} disabled>Go There</button>
+        <a href={bookmark.url} target="_blank" rel="noopener noreferrer">
+        <button className="button-ghost-go" >Go There</button></a>
 
     </div>
   );

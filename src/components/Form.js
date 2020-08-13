@@ -12,10 +12,11 @@ const Form = () => {
 const details = {}
 
   const CustomComponent = ({ loading, preview }) => {
-      details.url = preview.domain
+      details.domain = preview.domain
       details.description = preview.description
       details.img = preview.img
       details.title = preview.title
+      details.url = url
     // console.log(details)
     return loading
     ? (<h1>Loading preview...</h1>)
@@ -33,10 +34,11 @@ const details = {}
   const createBookmark = () => {
     const markRef = firebase.database().ref('Bookmarks');
     const bookmark = {
-      url: details.url,
+      domain: details.domain,
       description: details.description,
       img: details.img,
       title: details.title,
+      url: details.url
     };
     markRef.push(bookmark);
   };
