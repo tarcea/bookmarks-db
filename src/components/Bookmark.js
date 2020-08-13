@@ -8,9 +8,9 @@ const Bookmark = ({ bookmark }) => {
     const markRef = firebase.database().ref('Bookmarks').child(bookmark.id);
     markRef.remove();
   };
-  const goThere = (e) => {
-    e.preventDefault();
-      window.location.href = bookmark.url;
+  const goThere = () => {
+
+    //To do routes first
   };
 
   return (
@@ -21,9 +21,7 @@ const Bookmark = ({ bookmark }) => {
             <p>{bookmark.description}</p>
           </div>
         <button className="button-x" onClick={deleteBookmark}><i className="fas fa-times"></i></button>
-        <a href={bookmark.url} target="_blank" rel="noopener noreferrer">
-          <button className="button-ghost-go">Go There</button>
-        </a>
+        <button className="button-ghost-go" onClick={goThere}>Go There</button>
 
     </div>
   );
