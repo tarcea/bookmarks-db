@@ -2,17 +2,17 @@ import React from 'react';
 import firebase from '../firebase/firebase';
 import '../css/style.css';
 
+
 const Bookmark = ({ bookmark }) => {
   const deleteBookmark = () => {
     const markRef = firebase.database().ref('Bookmarks').child(bookmark.id);
     markRef.remove();
   };
-  // const completeTodo = () => {
-  //   const todoRef = firebase.database().ref('Todo').child(todo.id);
-  //   todoRef.update({
-  //     complete: !todo.complete,
-  //   });
-  // };
+  const goThere = (e) => {
+    e.preventDefault();
+      window.location.href = bookmark.url;
+  };
+
   return (
     <div className="box">
         <h5><strong>{bookmark.title}</strong></h5>
@@ -21,7 +21,9 @@ const Bookmark = ({ bookmark }) => {
             <p>{bookmark.description}</p>
           </div>
         <button className="button-x" onClick={deleteBookmark}><i className="fas fa-times"></i></button>
-        <button className="button-ghost-go">Go There</button>
+        <a href={bookmark.url} target="_blank" rel="noopener noreferrer">
+          <button className="button-ghost-go">Go There</button>
+        </a>
 
     </div>
   );
