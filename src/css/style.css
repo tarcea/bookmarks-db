@@ -28,7 +28,7 @@ p {
 }
 
 .button-ghost {
-  color: #4A4A4A;
+  color: black;
   border: 1px solid #4A4A4A;
   padding: 8px 24px;
   border-radius: 50px;
@@ -41,6 +41,7 @@ p {
 
 .button-ghost:hover {
   opacity: 0.6;
+  color: #4A4A4A;
 }
 
 .casset-buttons {
