@@ -103,10 +103,10 @@ p {
   opacity: 1;
   transition: opacity 0.3s ease;
   margin: 8px;
-  max-width: 100%;
+  max-width: 90%;
   position: absolute;
   bottom: 8px;
-  left: 50px;
+  right: 8px;
 }
 
 .button-ghost-go:hover {
