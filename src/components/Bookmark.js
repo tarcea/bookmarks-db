@@ -8,8 +8,8 @@ const Bookmark = ({ bookmark }) => {
     const markRef = firebase.database().ref('Bookmarks').child(bookmark.id);
     markRef.remove();
   };
-  // const goThere = (to: string) => {
-  //   //todo
+  // const goThere = () => {
+  //   window.location = (bookmark.url)
   // };
   return (
     <div className="box">

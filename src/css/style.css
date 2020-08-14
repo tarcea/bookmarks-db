@@ -7,6 +7,14 @@ body {
   padding: 8px;
 }
 
+a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 100;
+  text-align: center;
+}
+
 h1 {
   font-weight: 200;
 }
@@ -68,6 +76,8 @@ p {
     border-radius: 8px;
 }
 
+
+
 /*.card-box {
     position:relative;
     background-color: #efefef;
@@ -104,11 +114,12 @@ p {
   font-weight: lighter;
   opacity: 1;
   transition: opacity 0.3s ease;
-  margin: 8px;
+  /*margin: 8px;*/
   max-width: 90%;
   position: absolute;
   bottom: 8px;
-  left: 48px;
+  left: 50%;
+  margin-left: -54px;
 }
 
 .button-ghost-go:hover {
