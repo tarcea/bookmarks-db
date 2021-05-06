@@ -43,7 +43,7 @@ const CustomComponent = ({ loading, preview }) => {
       url: details.url
     };
     markRef.push(bookmark);
-    // setUrl('');
+    setUrl('');
     setDetails({});
   };
 
@@ -65,7 +65,7 @@ const CustomComponent = ({ loading, preview }) => {
         Bookmark
       </button>
         }
-        <LinkPreview url={url} render={CustomComponent}/>
+        {url && <LinkPreview url={url} render={CustomComponent}/>}
       </div>
     </div>
   );
