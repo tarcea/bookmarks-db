@@ -3,7 +3,7 @@ import firebase from '../firebase/firebase';
 import LinkPreview from '@ashwamegh/react-link-preview';
 import '../css/style.css';
 
-const Form = ({ length }) => {
+const Form = () => {
   const [url, setUrl] = useState('');
   const [loading, setLoading] = useState(false);
   const [details, setDetails] = useState({});
@@ -12,7 +12,6 @@ const Form = ({ length }) => {
     setUrl(e.target.value);
   };
 
-console.log(loading)
 const CustomComponent = ({ loading, preview }) => {
     details.domain = preview.domain
     details.description = preview.description
