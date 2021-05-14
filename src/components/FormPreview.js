@@ -53,6 +53,12 @@ const FormPreview = () => {
     setPreview(false)
   };
 
+  const cancelPreview = () => {
+    setPreview(false);
+    setUrl('');
+    setError('');
+  };
+
   return (
     <div>
       <div>
@@ -80,7 +86,12 @@ const FormPreview = () => {
       </button>
         }
         <br />
-        {error && `linkpreview.net error: ${error}`}
+        {error && 
+          <div className="danger">
+            {`linkpreview.net error: ${error}`}
+            <button className="button-x" onClick={cancelPreview} style={{top: "1px", right: "1px"}}>X</button>
+          </div>
+          }
         {loading ? <p>Loading preview...</p> : (
           !error && preview && 
           <LinkPreview 
