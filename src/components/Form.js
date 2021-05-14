@@ -11,7 +11,7 @@ const Form = () => {
   const handleOnChange = (e) => {
     setUrl(e.target.value);
   };
-
+// console.log(loading)
 const CustomComponent = ({ loading, preview }) => {
     details.domain = preview.domain
     details.description = preview.description
@@ -19,7 +19,6 @@ const CustomComponent = ({ loading, preview }) => {
     details.title = preview.title
     details.url = url
     setLoading(loading)
-  // console.log(details)
   return loading
   ? (<h1>Loading preview...</h1>)
   : (
@@ -30,7 +29,7 @@ const CustomComponent = ({ loading, preview }) => {
           <img height="100px" width="100px" src={preview.img} alt={preview.title} />
       </div>
   )
-}
+};
 
   const createBookmark = (e) => {
     const markRef = firebase.database().ref('Bookmarks');
@@ -64,7 +63,7 @@ const CustomComponent = ({ loading, preview }) => {
         Bookmark
       </button>
         }
-        {url && <LinkPreview url={url} render={CustomComponent}/>}
+        {url ? <LinkPreview url={url} render={CustomComponent}/> : ""}
       </div>
     </div>
   );
