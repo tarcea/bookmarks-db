@@ -5,7 +5,7 @@ import '../css/style.css';
 
 const BookmarkList = () => {
 
-const [bookmarkList, setBookmarkList] = useState();
+const [bookmarkList, setBookmarkList] = useState([]);
 
   useEffect(() => {
     const markRef = firebase.database().ref('Bookmarks');
@@ -23,11 +23,11 @@ const [bookmarkList, setBookmarkList] = useState();
     <div className="content-container">
       <div className="badge">
         <div className="counter">
-          {bookmarkList ? bookmarkList.length : ''}
+          {bookmarkList.length ? bookmarkList.length : ''}
         </div>
       </div>
       <div className="parent">
-        {bookmarkList
+        {bookmarkList.length
             ? bookmarkList.map((value, index, array) => 
             <Bookmark bookmark={array[array.length - 1 - index]} key={index} />)
             : ''}

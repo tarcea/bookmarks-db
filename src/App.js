@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import Form from './components/Form';
 import BookmarkList from './components/BookmarkList';
 import FormPreview from './components/FormPreview';
 

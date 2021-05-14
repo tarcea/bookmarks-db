@@ -14,6 +14,7 @@ const FormPreview = () => {
   const key = process.env.REACT_APP_LINKPREVIEW_KEY;
   const baseUrl = process.env.REACT_APP_LINKPREVIEW_BASE_URL;
   
+  // fetching infos from a given url
   const fetchData = async () => {
     setLoading(true);
     setError('');
@@ -37,7 +38,6 @@ const FormPreview = () => {
     setUrl(e.target.value);
   };
 
-
   const createBookmark = (e) => {
     const markRef = firebase.database().ref('Bookmarks');
     const bookmark = {
@@ -56,7 +56,13 @@ const FormPreview = () => {
   return (
     <div>
       <div>
-        <input type="text" onChange={handleOnChange} value={url} className="form" placeholder="paste here the web address" />
+        <input 
+          type="text" 
+          onChange={handleOnChange} 
+          value={url} 
+          className="form" 
+          placeholder="paste here the web address" 
+        />
         {!preview ? (
           <button 
           className='button-ghost' 
@@ -74,9 +80,15 @@ const FormPreview = () => {
       </button>
         }
         <br />
-        {error && error}
+        {error && `linkpreview.net error: ${error}`}
         {loading ? <p>Loading preview...</p> : (
-          !error && preview && <LinkPreview data={data} setUrl={setUrl} setPreview={setPreview}/>
+          !error && preview && 
+          <LinkPreview 
+            data={data} 
+            setUrl={setUrl} 
+            setPreview={setPreview}
+            createBookmark={createBookmark}
+          />
         )}
       </div>
     </div>
